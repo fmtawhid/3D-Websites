@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101a17">
+  <meta name="description" content="Explore this home for rent and enquire about arranging a viewing.">
+  <title>Estate | Home for Rent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#story" class="brand" aria-label="Estate home">ESTATE<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#design">Details</a>
+      <a href="#visit" class="nav-cta">Enquire <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="story" class="scroll-story" aria-label="Home for rent">
+      <div class="sticky-stage">
+        <video
+          id="propertyVideo"
+          class="property-video"
+          preload="auto"
+          muted
+          playsinline
+          disablepictureinpicture
+          aria-label="Scroll-controlled video tour of the residence"
+        >
+          <source src="assets/property-tour.mp4" type="video/mp4">
+        </video>
+        <div class="video-shade"></div>
+
+        <div class="hero-topline">
+          <span>HOME FOR RENT</span>
+          <span id="progressLabel" aria-live="polite">01 / 04</span>
+        </div>
+
+        <div class="scene-card" id="sceneCard">
+          <p class="eyebrow" id="sceneEyebrow">HOME FOR RENT</p>
+          <h1 id="hero-title">WELCOME</h1>
+          <p class="hero-description" id="sceneDescription">
+            A comfortable place to call home.
+          </p>
+          <a href="#home" class="outline-button">View details <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <a class="hero-scroll" href="#home"><span></span>SCROLL TO EXPLORE</a>
+      </div>
+    </section>
+
+    <section id="home" class="overview-section" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <p class="eyebrow">THE PROPERTY</p>
+        <div class="heading-row">
+          <h2 id="overview-title">A home for<br><em>everyday living.</em></h2>
+          <p>
+            A welcoming home, ready for its next tenant.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-dark">
+          <span class="card-number">01</span>
+          <span class="feature-icon" aria-hidden="true">⌂</span>
+          <h3>Make it<br>your own</h3>
+          <p>A place to settle in and feel at home.</p>
+          <span class="card-mark" aria-hidden="true">↗</span>
+        </article>
+        <article class="feature-card feature-card-sand">
+          <span class="card-number">02</span>
+          <span class="feature-icon" aria-hidden="true">☼</span>
+          <h3>Everyday<br>comfort</h3>
+          <p>Room to relax and enjoy your day.</p>
+          <span class="card-mark" aria-hidden="true">↗</span>
+        </article>
+        <article class="feature-card feature-card-olive">
+          <span class="card-number">03</span>
+          <span class="feature-icon" aria-hidden="true">◌</span>
+          <h3>Your own<br>space</h3>
+          <p>A home to make your own.</p>
+          <span class="card-mark" aria-hidden="true">↗</span>
+        </article>
+        <article class="feature-card feature-card-clay">
+          <span class="card-number">04</span>
+          <span class="feature-icon" aria-hidden="true">✳</span>
+          <h3>Arrange<br>a viewing</h3>
+          <p>Get in touch to find out more.</p>
+          <span class="card-mark" aria-hidden="true">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="design" class="design-section" aria-labelledby="design-title">
+      <div class="design-copy">
+        <p class="eyebrow">A PLACE TO LIVE</p>
+        <h2 id="design-title">Settle in.<br><em>Feel at home.</em></h2>
+        <p class="design-description">
+          Find out more about renting this home.
+        </p>
+        <a href="#visit" class="text-link">Ask about a viewing <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="design-art" aria-label="A graphic illustration of a calm, considered living space" role="img">
+        <div class="art-sun"></div>
+        <div class="art-window">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="art-plant"><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="art-sofa"><span></span></div>
+        <div class="art-table"></div>
+        <p>ROOM TO BE<br>YOURSELF</p>
+      </div>
+    </section>
+
+    <section id="visit" class="visit-section" aria-labelledby="visit-title">
+      <div class="visit-topline">
+        <p class="eyebrow">INTERESTED?</p>
+        <span>HOME FOR RENT</span>
+      </div>
+      <div class="visit-content">
+        <h2 id="visit-title">Make it<br><em>your home.</em></h2>
+        <p>
+          Ask about rent or arrange a viewing.
+        </p>
+        <a href="mailto:hello@example.com?subject=Rental%20enquiry" class="visit-button">
+          Enquire about renting <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <footer class="site-footer">
+        <a href="#story" class="brand">ESTATE<span>.</span></a>
+        <span>Home for rent.</span>
+        <a href="mailto:hello@example.com">Contact us</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
