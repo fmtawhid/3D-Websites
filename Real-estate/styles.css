@@ -132,7 +132,7 @@ a {
   position: absolute;
   top: 52%;
   left: 10%;
-  width: min(600px, 80%);
+  width: min(350px, 80%);
   padding: 28px 32px;
   border: 1px solid #ffffff30;
   background: rgba(16, 26, 23, 0.5);
