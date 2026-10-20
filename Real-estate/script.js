@@ -1,11 +1,13 @@
 const video = document.getElementById("propertyVideo");
 const story = document.getElementById("story");
 const card = document.getElementById("sceneCard");
+const stage = story.querySelector(".sticky-stage");
 const eyebrow = document.getElementById("sceneEyebrow");
 const title = document.getElementById("hero-title");
 const description = document.getElementById("sceneDescription");
 const progressLabel = document.getElementById("progressLabel");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const introProgress = 0.12;
 
 const scenes = [
   {
@@ -38,18 +40,28 @@ let pendingSeekUpdate = false;
 let sceneTimeout;
 
 function updateScene(progress) {
-  const sceneIndex = Math.min(
-    scenes.length - 1,
-    Math.floor(progress * scenes.length)
-  );
+  const isIntro = progress < introProgress;
+  stage.classList.toggle("intro-pause", isIntro);
+
+  const sceneIndex = isIntro
+    ? -1
+    : Math.min(
+        scenes.length - 1,
+        Math.floor(((progress - introProgress) / (1 - introProgress)) * scenes.length)
+      );
 
   if (sceneIndex === currentScene) return;
 
   currentScene = sceneIndex;
-  const scene = scenes[sceneIndex];
-
-  card.classList.add("changing");
   window.clearTimeout(sceneTimeout);
+
+  if (sceneIndex < 0) {
+    card.classList.remove("is-visible", "changing");
+    return;
+  }
+
+  const scene = scenes[sceneIndex];
+  card.classList.add("is-visible", "changing");
   sceneTimeout = window.setTimeout(() => {
     eyebrow.textContent = scene.eyebrow;
     title.innerHTML = scene.title;

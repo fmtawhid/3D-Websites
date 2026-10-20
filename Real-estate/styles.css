@@ -84,7 +84,7 @@ a {
 
 .scroll-story {
   position: relative;
-  height: 400vh;
+  height: 560vh;
 }
 
 .sticky-stage {
@@ -128,18 +128,32 @@ a {
   letter-spacing: 2px;
 }
 
+.hero-topline,
+.hero-scroll {
+  transition: opacity 350ms ease, visibility 350ms ease;
+}
+
+.sticky-stage.intro-pause .hero-topline,
+.sticky-stage.intro-pause .hero-scroll {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .scene-card {
   position: absolute;
   top: 52%;
   left: 10%;
-  width: min(350px, 80%);
-  padding: 28px 32px;
-  border: 1px solid #ffffff30;
-  background: rgba(16, 26, 23, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  width: min(620px, 80%);
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
   transform: translateY(-50%);
-  transition: opacity 300ms ease, transform 300ms ease;
+  transition: opacity 350ms ease, transform 350ms ease, visibility 350ms ease;
+}
+
+.scene-card.is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .scene-card.changing {
@@ -163,10 +177,10 @@ a {
   letter-spacing: -2px;
 }
 
-.hero-content h1 {
+.scene-card h1 {
   margin: 20px 0;
-  font-size: clamp(52px, 7vw, 92px);
-  line-height: 0.98;
+  font-size: clamp(64px, 11vw, 144px);
+  line-height: 0.88;
 }
 
 .hero-description {
@@ -634,7 +648,7 @@ a {
   }
 
   .scroll-story {
-    height: 360vh;
+    height: 500vh;
   }
 
   .property-video {
@@ -658,16 +672,15 @@ a {
     text-align: right;
   }
 
-  .hero-content h1 {
-    font-size: clamp(50px, 13vw, 68px);
+  .scene-card h1 {
+    font-size: clamp(58px, 15vw, 88px);
   }
 
   .scene-card {
     top: auto;
-    bottom: 12%;
+    bottom: 18%;
     left: 7%;
     width: 86%;
-    padding: 22px 18px;
     transform: none;
   }
 
