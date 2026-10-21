@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17130f">
+  <meta name="description" content="Discover KORAI, a contemporary Bangladeshi kitchen serving soulful local flavours, made slowly and shared generously.">
+  <title>KORAI — A Bengali Kitchen</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#story" class="brand" aria-label="Korai home">KORAI<span>°</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">The menu</a>
+      <a href="#design">Our story</a>
+      <a href="#visit" class="nav-cta">Find your seat <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="story" class="scroll-story" aria-label="Welcome to Korai">
+      <div class="sticky-stage">
+        <video
+          id="restaurantVideo"
+          class="restaurant-video"
+          preload="auto"
+          muted
+          playsinline
+          disablepictureinpicture
+          aria-label="Atmospheric restaurant video"
+        >
+          <source src="assets/final.mp4" type="video/mp4">
+        </video>
+        <div class="video-shade"></div>
+        <span class="hero-spice spice-one" aria-hidden="true"></span>
+        <span class="hero-spice spice-two" aria-hidden="true"></span>
+        <span class="hero-spice spice-three" aria-hidden="true"></span>
+
+        <div class="hero-topline">
+          <span>CONTEMPORARY BENGALI KITCHEN</span>
+          <span id="progressLabel" aria-live="polite">01 / 04</span>
+        </div>
+
+        <div class="scene-card" id="sceneCard">
+          <p class="eyebrow" id="sceneEyebrow">A TABLE FULL OF STORIES</p>
+          <h1 id="hero-title">COME<br>HUNGRY.</h1>
+          <p class="hero-description" id="sceneDescription">
+            Bengali soul, a little bit of surprise, and always room for one more.
+          </p>
+          <a href="#home" class="outline-button">Discover the menu <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <a class="hero-scroll" href="#home"><span></span>SCROLL TO SLOW DOWN</a>
+      </div>
+    </section>
+
+    <section id="home" class="overview-section" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <p class="eyebrow">FROM OUR KITCHEN</p>
+        <div class="heading-row">
+          <h2 id="overview-title">Made with fire.<br><em>Served with love.</em></h2>
+          <p>
+            Old Dhaka spice boxes, seasonal market finds, and recipes worth passing around the table.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-dark">
+          <div class="dish-image dish-kacchi" role="img" aria-label="Aromatic kacchi biryani"></div>
+          <div class="dish-info">
+            <span class="card-number">01 / HOUSE FAVOURITE</span>
+            <h3>Kacchi<br>biryani</h3>
+            <p>Fragrant basmati, tender meat, golden potato, and a little patience.</p>
+            <span class="dish-price">A proper feast</span>
+          </div>
+        </article>
+        <article class="feature-card feature-card-sand">
+          <div class="dish-image dish-fish" role="img" aria-label="Bengali fish curry with rice"></div>
+          <div class="dish-info">
+            <span class="card-number">02 / FROM THE RIVER</span>
+            <h3>Shorshe<br>ilish</h3>
+            <p>Hilsa in a bright mustard sauce, just like Sunday lunch at home.</p>
+            <span class="dish-price">Seasonal catch</span>
+          </div>
+        </article>
+        <article class="feature-card feature-card-olive">
+          <div class="dish-image dish-khichuri" role="img" aria-label="Comforting bhuna khichuri"></div>
+          <div class="dish-info">
+            <span class="card-number">03 / COMFORT FOOD</span>
+            <h3>Bhuna<br>khichuri</h3>
+            <p>Toasted rice and lentils, warming spices, and the taste of a rainy day.</p>
+            <span class="dish-price">Best shared</span>
+          </div>
+        </article>
+      </div>
+      <p class="menu-note">Our menu follows the seasons. Ask us what is cooking today.</p>
+    </section>
+
+    <section id="design" class="design-section" aria-labelledby="design-title">
+      <div class="design-copy">
+        <p class="eyebrow">A LITTLE ABOUT US</p>
+        <h2 id="design-title">From our roots.<br><em>With room to roam.</em></h2>
+        <p class="design-description">
+          KORAI is a love letter to Bengali cooking: the crackle of mustard seeds, the warmth of a shared meal, and the joy of discovering an old favourite all over again.
+        </p>
+        <a href="#visit" class="text-link">Pull up a chair <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="design-art" aria-label="Illustration of a Bengali meal served for sharing" role="img">
+        <div class="art-sun"></div>
+        <div class="art-pattern"></div>
+        <div class="art-plate">
+          <div class="art-rice"></div>
+          <div class="art-curry"></div>
+          <div class="art-garnish"></div>
+        </div>
+        <div class="art-bowl"><span></span></div>
+        <p>GOOD FOOD.<br>GOOD COMPANY.</p>
+      </div>
+    </section>
+
+    <section id="visit" class="visit-section" aria-labelledby="visit-title">
+      <div class="visit-topline">
+        <p class="eyebrow">THERE'S ALWAYS ROOM</p>
+        <span>COME AS YOU ARE</span>
+      </div>
+      <div class="visit-content">
+        <h2 id="visit-title">Gather<br><em>around.</em></h2>
+        <p>
+          Bring your people, bring your appetite. We’ll put the kettle on and save you a seat.
+        </p>
+        <a href="#home" class="visit-button">
+          Take a look at the menu <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <footer class="site-footer">
+        <a href="#story" class="brand">KORAI<span>°</span></a>
+        <span>A Bengali kitchen, made for sharing.</span>
+        <a href="#story">Back to the top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
